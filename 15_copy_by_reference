@@ -1,0 +1,65 @@
+/**
+ * copy by value 값에 의한 전달
+ * copy by reference 참조에 의한 전달
+ * 
+ * 1)기본적으로 모든 primitive 값은 copy by value이다.
+ * 2)객체는 copy by reference이다.
+ * 
+ * 
+ */
+
+let original ='안녕하세요';
+let clone =original;
+
+console.log(original);
+console.log(clone);
+
+clone+=' 안유진 입니다.';
+console.log('------------------');
+console.log(original);
+console.log(clone);
+
+let originalObj= {
+    name:'안유진',
+    group:'아이브',
+
+};
+
+let cloneObj=originalObj;
+console.log(originalObj);
+console.log(cloneObj);
+
+console.log('----------------');
+originalObj['group']='코드팩토리';
+console.log(originalObj);
+console.log(cloneObj);
+
+console.log(originalObj===cloneObj);
+console.log(original===clone);
+
+original={
+    name:'최지훈',
+    group:'코드팩토리',
+};
+
+console.log(originalObj===cloneObj);
+
+const yujin1={
+    name:'안유진',
+    group:'아이브',
+}
+const yujin2=yujin1;
+const yujin3={
+    name: '안유진',
+    group: '아이브',
+};
+console.log(yujin1===yujin2);
+console.log(yujin2===yujin3);
+console.log(yujin2===yujin3);
+console.log(yujin1.name===yujin3.name);
+
+
+
+
+const t2=[1,2,3,4,5];
+console.log(t2.length);
